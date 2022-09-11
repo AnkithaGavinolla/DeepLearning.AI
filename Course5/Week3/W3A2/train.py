@@ -19,17 +19,17 @@ n_freq = 101 # Number of frequencies input to the model at each time step of the
 
 Ty = 1375 # The number of time steps in the output of our model
 
-X = np.load("../XY_train/X0.npy")
-Y = np.load("../XY_train/Y0.npy")
+X = np.load("XY_train/X0.npy")
+Y = np.load("XY_train/Y0.npy")
 
-X = np.concatenate((X, np.load("../XY_train/X1.npy")), axis=0)
-Y = np.concatenate((Y, np.load("../XY_train/Y1.npy")), axis=0)
+X = np.concatenate((X, np.load("XY_train/X1.npy")), axis=0)
+Y = np.concatenate((Y, np.load("XY_train/Y1.npy")), axis=0)
 
 Y = np.swapaxes(Y, 1, 2)
 
 # Load preprocessed dev set examples
-X_dev = np.load("../XY_dev/X_dev.npy")
-Y_dev = np.load("../XY_dev/Y_dev.npy")
+X_dev = np.load("XY_dev/X_dev.npy")
+Y_dev = np.load("XY_dev/Y_dev.npy")
 
 # GRADED FUNCTION: model
 
